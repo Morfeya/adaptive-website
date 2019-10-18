@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/10f3208c1c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h2 class="logo"><a href="index.html">Dexane</a></h2>
+        <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
+            </label>
+
+            <ul class="menu">
+                <a href="index.html">Home</a>
+                <a href="ourteam.html">About</a>
+                <a href="#">Services</a>
+                <a href="#">Career</a>
+                <a href="contact.html">Contact Us</a>
+            
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>   
+    </div>
+<div class="testimonial-section">
+    <div class="inner-width">
+        <h1>our team</h1>
+        <div class="testimonial-pics">
+            <img src="img/pic1.jpg" alt="test1" class="active">
+            <img src="img/pic2.jpg" alt="test2">
+            <img src="img/pic3.jpg" alt="test3">
+            <img src="img/pic4.jpg" alt="test4">
+        </div>
+    </div>
+
+    <div class="testimonial-contents">
+        <div class="testimonial active" id="test1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, vero!Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem officiis sunt ex soluta qui accusamus repellendus. Debitis, perferendis voluptatem.</p>
+            <span class="description">Thomas / Developer</span>
+        </div>
+        <div class="testimonial"id="test2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quasi nobis, eos recusandae nulla voluptate?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem officiis sunt ex soluta qui accusamus repellendus. Debitis, perferendis voluptatem.</p>
+            <span class="description">Emy / Developer</span>
+        </div>
+        <div class="testimonial"id="test3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem officiis sunt ex soluta qui accusamus repellendus. Debitis, perferendis voluptatem.</p>
+            <span class="description">Clara / Developer</span>
+        </div>
+        <div class="testimonial"id="test4">
+            <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem officiis sunt ex soluta qui accusamus repellendus. Debitis, perferendis voluptatem.</p>
+            <span class="description">James / Developer</span>
+        </div>
+    </div>
+</div> 
+
+<script type="text/javascript">
+    $('.testimonial-pics img').click(function(){
+        $('.testimonial-pics img').removeClass("active");
+        $(this).addClass("active");
+
+        $(".testimonial").removeClass("active");
+        $("#"+$(this).attr("alt")).addClass("active");
+    });
+</script>
+</body>
+</html>

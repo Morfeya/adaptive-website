@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "montserrat", sans-serif;
+}
+
+/* Home Page */
+
+.header {
+    height: 100px;
+    background: #545472;
+    padding: 0 20px;
+}
+
+.logo a{
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Menu */
+
+.menu {
+    float: right;
+    line-height: 100px;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: #2e86de;
+}
+
+.show-menu-btn{
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 100px;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+/* Image */
+
+img {
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+    
+/* Content */
+
+.content    {
+    padding: 0 20px;
+}
+
+.content p {
+    text-align: justify;
+}
+
+/* Buttons */
+
+@media screen and (max-width: 800px) {
+    .show-menu-btn, .hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .hide-menu-btn {
+        position: absolute;
+        top:  40px;
+        right: 40px;
+        float: right;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+}
+
+/* Contact Page */
+
+.contact-section {
+    width: 100%;
+    text-align: center;
+    background: #333;
+    height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: rgb(148, 148, 148);
+    font-size: 24px;
+    padding-top: 40px;
+    font-weight: 550;
+}
+
+.name, .email, .message {
+    margin: 40px 0;
+    background: none;
+    outline: none;
+    border: none;
+    color: rgb(148, 148, 148);
+    font-weight: 500;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    padding: 5px;
+    font-size: 14px;
+}
+
+.message {
+    height: 200px;
+}
+
+button {
+    background: none;
+    outline: none;
+    color: rgb(55, 122, 223);
+    border: 1px solid rgb(55, 122, 223);
+    padding: 15px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: rgb(55, 122, 223);
+    color: #fff;
+}
+
+@media screen and (max-width: 780px) {
+    .wrap {
+        width: 80%;
+    }
+}
+
+/* Our Team Page*/
+
+.testimonial-pics img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.testimonial-section {
+    background: #f1f1f1;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonial-section h1 {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #333;
+    font-size: 24px;
+    font-weight: normal;
+
+}
+
+.testimonial-pics {
+    padding: 40px 0;
+}
+
+.testimonial-pics img:hover,  .testimonial-pics img.active{
+    filter: none;
+}
+
+.testimonial-contacts {
+    max-width: 600px;
+    margin: auto;
+}
+
+.testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial p{
+    color: #5c5c5c;
+    margin-bottom: 20px;
+}
+
+.testimonial .description {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 4px;
+    color: #5c5c5c;
+}
+
